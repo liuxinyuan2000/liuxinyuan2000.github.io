@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liuxinyuan2000.github.io">
-  <title>Archives | Hexo</title>
+  <title>java基本容器 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://liuxinyuan2000.github.io/archives/index.html">
+  <meta name="description" content="java基本容器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基本容器">
+<meta property="og:url" content="http://liuxinyuan2000.github.io/2020/06/28/java%E5%9F%BA%E6%9C%AC%E5%AE%B9%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java基本容器">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/561065/201806/561065-20180622231500875-906107682.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/561065/201806/561065-20180622234803735-248460425.png">
+<meta property="article:published_time" content="2020-06-28T11:44:18.000Z">
+<meta property="article:modified_time" content="2020-06-28T12:36:17.516Z">
 <meta property="article:author" content="Liu xinyuan">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images2018.cnblogs.com/blog/561065/201806/561065-20180622231500875-906107682.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -158,141 +165,279 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-java基本容器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      java基本容器
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/java%E5%9F%BA%E6%9C%AC%E5%AE%B9%E5%99%A8/" class="archive-article-date">
+
+        
+        <a href="/2020/06/28/java%E5%9F%BA%E6%9C%AC%E5%AE%B9%E5%99%A8/" class="archive-article-date">
   	<time datetime="2020-06-28T11:44:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/java%E5%9F%BA%E6%9C%AC%E5%AE%B9%E5%99%A8/">java基本容器</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="java基本容器"><a href="#java基本容器" class="headerlink" title="java基本容器"></a>java基本容器</h1><a id="more"></a>
+<blockquote>
+<p>java中的容器主要分为三种：长度(大小)固定的Array(即数组)、不固定长度的Collection与Map</p>
+</blockquote>
+<h2 id="容器分类图"><a href="#容器分类图" class="headerlink" title="容器分类图"></a>容器分类图</h2><p><img src="https://images2018.cnblogs.com/blog/561065/201806/561065-20180622231500875-906107682.png" alt="分类图"></p>
+<p>通过上图，可以把握两个基本主体，即Collection和Map。</p>
+<p>Collection是一个接口，是高度抽象出来的集合，它包含了集合的基本操作和属性。Collection包含了List和Set两大分支。</p>
+<p>List是一个有序的队列，每一个元素都有它的索引。第一个元素的索引值是0。List的实现类有LinkedList, ArrayList, Vector, Stack。<br>Set是一个不允许有重复元素的集合。 Set的实现类有HastSet和TreeSet。HashSet依赖于HashMap，它实际上是通过HashMap实现的；TreeSet依赖于TreeMap，它实际上是通过TreeMap实现的。</p>
+<p>Map是一个映射接口，即key-value键值对。Map中的每一个元素包含“一个key”和“key对应的value”。</p>
+<p>AbstractMap是个抽象类，它实现了Map接口中的大部分API。而HashMap，TreeMap，WeakHashMap都是继承于AbstractMap。<br>Hashtable虽然继承于Dictionary，但它实现了Map接口。</p>
+<p>Iterator是遍历集合的工具，即我们通常通过Iterator迭代器来遍历集合。我们说Collection依赖于Iterator，是因为Collection的实现类都要实现iterator()函数，返回一个Iterator对象。ListIterator是专门为遍历List而存在的。</p>
+<p>Enumeration是JDK 1.0引入的抽象类。作用和Iterator一样，也是遍历集合；但是Enumeration的功能要比Iterator少。在上面的框图中，Enumeration只能在Hashtable, Vector, Stack中使用。</p>
+<p>Arrays和Collections是操作数组、集合的两个工具类。</p>
+<hr>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><p>Array就是数组，也就是长度固定的容器，一但创建了这个对象就不能改变其大小(capacity)  </p>
+<p>初始化：type[]array=new type[length]</p>
+<p>长度：array.length;</p>
+<p>区别：数组（array）：长度固定，元素都是同一类型，可以存放基本数据类型<br>容器类（ArrayList, LinkedList，HashSet，HashMap，Vector, ): 长度可变，可以存放任意类型的对象，如果存放基本类型数据需要包装类（Integer,Double等）</p>
+<hr>
+<hr>
+<h2 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h2><p>List是一个继承于Collection的接口，即List是集合中的一种。List是有序的队列，List中的每一个元素都有一个索引；第一个元素的索引值是0，往后的元素的索引值依次+1。和Set不同，List中允许有重复的元素。</p>
+<p>常用API</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Collection的API</span><br><span class="line">abstract boolean         add(E object)</span><br><span class="line">abstract void            clear()</span><br><span class="line">abstract boolean         contains(Object object)</span><br><span class="line">abstract boolean         isEmpty()</span><br><span class="line">abstract int             size()</span><br><span class="line">abstract &lt;T&gt; T[]         toArray(T[] array)</span><br><span class="line">abstract Object[]        toArray()</span><br><span class="line">abstract boolean         addAll(Collection&lt;? extends E&gt; collection)</span><br><span class="line">&#x2F;&#x2F; 相比与Collection，List新增的API：</span><br><span class="line">abstract void                add(int location, E object)</span><br><span class="line">abstract E                   get(int location)</span><br><span class="line">abstract boolean             addAll(int location, Collection&lt;? extends E&gt; collection)</span><br><span class="line">abstract int                 indexOf(Object object)</span><br><span class="line">abstract int                 lastIndexOf(Object object)</span><br><span class="line">abstract List&lt;E&gt;             subList(int start, int end)</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><p>ArrayList是一个动态数组，也是我们最常用的集合。它允许任何符合规则的元素插入甚至包括null。每一个ArrayList都有一个初始容量：</p>
+<p>private static final int DEFAULT_CAPACITY = 10;</p>
+<p>随着容器中的元素不断增加，容器的大小也会随着增加。在每次向容器中增加元素的同时都会进行容量检查，当快溢出时，就会进行扩容操作。所以如果我们明确所插入元素的多少，最好指定一个初始容量值，避免过多的进行扩容操作而浪费时间、效率。</p>
+<p>size、isEmpty、get、set、iterator 和 listIterator 操作都以固定时间运行。add 操作以分摊的固定时间运行，也就是说，添加 n 个元素需要 O(n) 时间（由于要考虑到扩容，所以这不只是添加元素会带来分摊固定时间开销那样简单）。</p>
+<p>ArrayList擅长于随机访问。同时ArrayList是非同步的。</p>
+<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>LinkedList定义如下：</p>
+<p>public class LinkedList<E> extends AbstractSequentialList<E><br>implements List<E>, Deque<E>, Cloneable, java.io.Serializable</p>
+<p>同样实现List接口的LinkedList与ArrayList不同，ArrayList是一个动态数组，而LinkedList是一个双向链表。所以它除了有ArrayList的基本操作方法外还额外提供了get，remove，insert方法在LinkedList的首部或尾部。</p>
+<p>由于实现的方式不同，LinkedList不能随机访问，它所有的操作都是要按照双重链表的需要执行。在列表中索引的操作将从开头或结尾遍历列表（从靠近指定索引的一端，节约一半时间）。这样做的好处就是可以通过较低的代价在List中进行插入和删除操作。</p>
+<p>与ArrayList一样，LinkedList也是非同步的。如果多个线程同时访问一个List，则必须自己实现访问同步。一种解决方法是在创建List时构造一个同步的List：</p>
+<p>List list = Collections.synchronizedList(new LinkedList(…));</p>
+<h3 id="stack"><a href="#stack" class="headerlink" title="stack"></a>stack</h3><p>Stack定义如下：</p>
+<p>public class Stack<E> extends Vector<E> {}</p>
+<p>Stack继承自Vector，实现一个后进先出的堆栈。Stack提供5个额外的方法使得Vector得以被当作堆栈使用。基本的push和pop方法，还有peek方法得到栈顶的元素，empty方法测试堆栈是否为空，search方法检测一个元素在堆栈中的位置。Stack刚创建后是空栈</p>
+<h3 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h3><p>队列通常（但并非一定）以 FIFO（先进先出）的方式排序各个元素。不过优先级队列和 LIFO 队列（或堆栈）例外，前者根据提供的比较器或元素的自然顺序对元素进行排序，后者按 LIFO（后进先出）的方式对元素进行排序。无论使用哪种排序方式，队列的头 都是调用 remove() 或 poll() 所移除的元素。在 FIFO 队列中，所有的新元素都插入队列的末尾。其他种类的队列可能使用不同的元素放置规则。每个 Queue 实现必须指定其顺序属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">boolean  add(E e) &#x2F;&#x2F;将指定的元素插入此队列（如果立即可行且不会违反容量限制），</span><br><span class="line">E        element() &#x2F;&#x2F;获取，但是不移除此队列的头。</span><br><span class="line">boolean  offer(E e) &#x2F;&#x2F;将指定的元素插入此队列（如果立即可行且不会违反容量限制），当使用有容量限制的队列时，此方法通常要优于 add(E)，后者可能无法插入元素，而只是抛出一个异常。</span><br><span class="line"></span><br><span class="line">E        peek() &#x2F;&#x2F;获取但不移除此队列的头；如果此队列为空，则返回 null。</span><br><span class="line">E        poll() &#x2F;&#x2F;获取并移除此队列的头，如果此队列为空，则返回 null。</span><br><span class="line">E        remove() &#x2F;&#x2F;获取并移除此队列的头。</span><br></pre></td></tr></table></figure>
 
+<p>优先队列 PriorityQueue<Integer> heap =New PriorityQueue<Integer>((n1, n2) -&gt; n1 - n2)</p>
+<hr>
+<hr>
+<h2 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h2><p>Set定义如下：</p>
+<p>public interface Set<E> extends Collection<E> {}</p>
+<p>Set是一个继承于Collection的接口，Set是一种不包括重复元素的Collection。它维持它自己的内部排序，所以随机访问没有任何意义。与List一样，它同样运行null的存在但是仅有一个。由于Set接口的特殊性，所有传入Set集合中的元素都必须不同，</p>
+<p>关于API方面。Set的API和Collection完全一样。</p>
+<p>实现了Set接口的集合有：HashSet、TreeSet、LinkedHashSet、EnumSet。</p>
+<h3 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h3><p>HashSet定义如下：</p>
+<p>public class HashSet<E> extends AbstractSet<E><br>implements Set<E>, Cloneable, java.io.Serializable</p>
+<p>HashSet堪称查询速度最快的集合，因为其内部是以HashCode来实现的。集合元素可以是null,但只能放入一个null。它内部元素的顺序是由哈希码来决定的，所以它不保证set的迭代顺序；特别是它不保证该顺序恒久不变。</p>
+<p>常用方法：</p>
+<ul>
+<li>Set.add();</li>
+<li>Set.remove();</li>
+<li>Set.contain();</li>
+<li>Set.clear();<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">使用迭代器遍历集合</span><br><span class="line">Iterator it&#x3D; set.iterator();</span><br><span class="line">While(it.hasNext())</span><br><span class="line">syso(it.next());</span><br><span class="line">For each遍历</span><br><span class="line">For(Object obj:set)</span><br></pre></td></tr></table></figure>
+<h3 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h3>TreeSet定义如下：</li>
+</ul>
+<p>public class TreeSet<E> extends AbstractSet<E><br>implements NavigableSet<E>, Cloneable, java.io.Serializable</p>
+<p>TreeSet是二叉树实现的，基于TreeMap，生成一个总是处于排序状态的set，内部以TreeMap来实现，不允许放入null值。它是使用元素的自然顺序对元素进行排序，或者根据创建Set时提供的 Comparator 进行排序，具体取决于使用的构造方法</p>
+<ul>
+<li>Set<Integer>set= new TreeSet<Integer>();</li>
+<li>Set.add();</li>
+<li>Set.remove();</li>
+<li>Set.contains();</li>
+<li>Set.clear();</li>
+</ul>
+<hr>
+<hr>
+<h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><p>Map与List、Set接口不同，它是由一系列键值对组成的集合，提供了key到Value的映射。在Map中它保证了key与value之间的一一对应关系。也就是说一个key对应一个value，所以它不能存在相同的key值，当然value值可以相同。</p>
+<p>实现map的集合有：HashMap、HashTable、TreeMap、WeakHashMap。</p>
+<h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><p>HashMap定义如下：</p>
+<p>public class HashMap&lt;K,V&gt; extends AbstractMap&lt;K,V&gt;<br>implements Map&lt;K,V&gt;, Cloneable, Serializable</p>
+<p>以哈希表数据结构实现，查找对象时通过哈希函数计算其位置，它是为快速查询而设计的，其内部定义了一个hash表数组（Entry[] table），元素会通过哈希转换函数将元素的哈希地址转换成数组中存放的索引，如果有冲突，则使用散列链表的形式将所有相同哈希地址的元素串起来，可能通过查看HashMap.Entry的源码它是一个单链表结构。</p>
+<ul>
+<li>Map&lt;String,Integer&gt;map=new HashMap&lt;String,Integer&gt;();</li>
+<li>Map.put(“b”,1);</li>
+<li>Map.get(“b”);//根据key取值</li>
+<li>Map.remove(“b);//根据key移除</li>
+<li>Map.size();</li>
+<li>Map.containsKey(“b”);</li>
+<li>Map.containsValue(“1”);</li>
+<li>Map.clear();</li>
+<li>Set<String>keys=Map.keyset();//获取map集合的key集合</li>
+<li>Map.values();//获取集合的所有value值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;遍历方式</span><br><span class="line">For(String key:keys)&#123;</span><br><span class="line">Map.get(key)</span><br><span class="line">&#125;</span><br><span class="line">Set&lt;Entry&lt;String,Integer&gt;&gt;entrys&#x3D;map.entrySet();</span><br><span class="line">For(Entry&lt;String,Integer&gt;en:entrys)&#123;</span><br><span class="line">En.getKey(),en.getValue();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><p>TreeMap<br>TreeMap的定义如下：</p>
+<p>public class TreeMap&lt;K,V&gt; extends AbstractMap&lt;K,V&gt;<br>implements NavigableMap&lt;K,V&gt;, Cloneable, java.io.Serializable</p>
+<p>有序散列表，实现SortedMap接口，底层通过红黑树实现</p>
+<ul>
+<li>Map&lt;Integer,String&gt;map=new TreeMap&lt;Integer,String&gt;();</li>
+<li>Map.put(4,”a”);<br>//输出自动按照key排序</li>
+</ul>
+<hr>
+<hr>
+<h2 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h2><p>Iterator定义如下：</p>
+<p>public interface Iterator<E> {}</p>
+<p>Iterator是一个接口，它是集合的迭代器。集合可以通过Iterator去遍历集合中的元素。Iterator提供的API接口，包括：是否存在下一个元素、获取下一个元素、删除当前元素。<br>注意：Iterator遍历Collection时，是fail-fast机制的。即，当某一个线程A通过iterator去遍历某集合的过程中，若该集合的内容被其他线程所改变了；那么线程A访问集合时，就会抛出ConcurrentModificationException异常，产生fail-fast事件。关于fail-fast的详细内容，我们会在后面专门进行说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Iterator的API：</span><br><span class="line">abstract boolean hasNext()</span><br><span class="line">abstract E next()</span><br><span class="line">abstract void remove()</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<p>最后一张图总结框架</p>
+<p><img src="https://images2018.cnblogs.com/blog/561065/201806/561065-20180622234803735-248460425.png" alt="框架"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://liuxinyuan2000.github.io/0.github.io/2020/06/28/java%E5%9F%BA%E6%9C%AC%E5%AE%B9%E5%99%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-06-28T02:30:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/28/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">回溯算法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">回溯算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java基本容器"><span class="toc-number">1.</span> <span class="toc-text">java基本容器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#容器分类图"><span class="toc-number">1.1.</span> <span class="toc-text">容器分类图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Array"><span class="toc-number">1.2.</span> <span class="toc-text">Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#List接口"><span class="toc-number">1.3.</span> <span class="toc-text">List接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList"><span class="toc-number">1.3.1.</span> <span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LinkedList"><span class="toc-number">1.3.2.</span> <span class="toc-text">LinkedList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stack"><span class="toc-number">1.3.3.</span> <span class="toc-text">stack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#queue"><span class="toc-number">1.3.4.</span> <span class="toc-text">queue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set接口"><span class="toc-number">1.4.</span> <span class="toc-text">Set接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HashSet"><span class="toc-number">1.4.1.</span> <span class="toc-text">HashSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TreeSet"><span class="toc-number">1.4.2.</span> <span class="toc-text">TreeSet</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map接口"><span class="toc-number">1.5.</span> <span class="toc-text">Map接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HashMap"><span class="toc-number">1.5.1.</span> <span class="toc-text">HashMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TreeMap"><span class="toc-number">1.5.2.</span> <span class="toc-text">TreeMap</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Iterator"><span class="toc-number">1.6.</span> <span class="toc-text">Iterator</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-06-27T11:46:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-27</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/26/hello-world/" class="archive-article-date">
-  	<time datetime="2020-06-26T09:11:36.144Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/26/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -315,8 +460,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
