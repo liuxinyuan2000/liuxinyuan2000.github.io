@@ -6,15 +6,63 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liuxinyuan2000.github.io">
-  <title>Archives: 2020/7 | lxy2000</title>
+  <title>redis | lxy2000</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lxy2000">
-<meta property="og:url" content="http://liuxinyuan2000.github.io/archives/2020/07/index.html">
+  <meta name="description" content="REDIS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis">
+<meta property="og:url" content="http://liuxinyuan2000.github.io/2021/06/26/redis/index.html">
 <meta property="og:site_name" content="lxy2000">
+<meta property="og:description" content="REDIS">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720966087.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720838855.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624721014270.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720904499.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723157540.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723207402.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723269292.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723429093.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723458809.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723537759.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723626573.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723710111.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723792135.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756052850.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756706324.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756835332.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756940354.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756991423.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757185516.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757306182.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757454608.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757518756.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757623427.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757759605.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757926506.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758229576.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758275680.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758345227.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758376380.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758405432.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758454147.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758569364.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758742067.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759048737.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759146548.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759198610.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759420388.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759458312.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759924243.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760023137.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760159258.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760294086.png">
+<meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760356293.png">
+<meta property="article:published_time" content="2021-06-26T10:25:03.998Z">
+<meta property="article:modified_time" content="2021-07-23T03:47:49.577Z">
 <meta property="article:author" content="Liu xinyuan">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720966087.png">
   
     <link rel="alternative" href="/atom.xml" title="lxy2000" type="application/atom+xml">
   
@@ -158,103 +206,226 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      redis
+    </h1>
+  
+
+        
+        <a href="/2021/06/26/redis/" class="archive-article-date">
+  	<time datetime="2021-06-26T10:25:03.998Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="REDIS"><a href="#REDIS" class="headerlink" title="REDIS"></a>REDIS</h1><a id="more"></a>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720966087.png" alt="1624720966087"></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720838855.png" alt="1624720838855"></h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624721014270.png" alt="1624721014270"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624720904499.png" alt="1624720904499"></p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723157540.png" alt="1624723157540"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723207402.png" alt="1624723207402"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723269292.png" alt="1624723269292"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723429093.png" alt="1624723429093"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723458809.png" alt="1624723458809"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723537759.png" alt="1624723537759"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723626573.png" alt="1624723626573"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723710111.png" alt="1624723710111"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624723792135.png" alt="1624723792135"></p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756052850.png" alt="1624756052850"></p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756706324.png" alt="1624756706324"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756835332.png" alt="1624756835332"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756940354.png" alt="1624756940354"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624756991423.png" alt="1624756991423"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757185516.png" alt="1624757185516"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757306182.png" alt="1624757306182"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757454608.png" alt="1624757454608"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757518756.png" alt="1624757518756"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757623427.png" alt="1624757623427"></p>
+<h2 id="三种特殊数据类型"><a href="#三种特殊数据类型" class="headerlink" title="三种特殊数据类型"></a>三种特殊数据类型</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757759605.png" alt="1624757759605"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624757926506.png" alt="1624757926506"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758229576.png" alt="1624758229576"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758275680.png" alt="1624758275680"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758345227.png" alt="1624758345227"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758376380.png" alt="1624758376380"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758405432.png" alt="1624758405432"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758454147.png" alt="1624758454147"></p>
+<h2 id="Hyperloglog"><a href="#Hyperloglog" class="headerlink" title="Hyperloglog"></a>Hyperloglog</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758569364.png" alt="1624758569364"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624758742067.png" alt="1624758742067"></p>
+<h2 id="基本事务操作"><a href="#基本事务操作" class="headerlink" title="基本事务操作"></a>基本事务操作</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759048737.png" alt="1624759048737"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759146548.png" alt="1624759146548"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759198610.png" alt="1624759198610"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759420388.png" alt="1624759420388"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759458312.png" alt="1624759458312"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624759924243.png" alt="1624759924243"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760023137.png" alt="1624760023137"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760159258.png" alt="1624760159258"></p>
+<p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760294086.png" alt="1624760294086"></p>
+<h2 id="Jedis"><a href="#Jedis" class="headerlink" title="Jedis"></a>Jedis</h2><p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624760356293.png" alt="1624760356293"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="archive-article-date">
-  	<time datetime="2020-07-24T13:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://liuxinyuan2000.github.io/0.github.io/2021/06/26/redis/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/16/java%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
-  	<time datetime="2020-07-16T02:34:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/06/26/Linux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Linux
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/06/25/springmvc/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springmvc</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/16/java%E5%AD%97%E7%AC%A6%E4%B8%B2/">java字符串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#REDIS"><span class="toc-number">1.</span> <span class="toc-text">REDIS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.2.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础知识"><span class="toc-number">1.3.</span> <span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">1.4.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String"><span class="toc-number">1.5.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三种特殊数据类型"><span class="toc-number">1.6.</span> <span class="toc-text">三种特殊数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hyperloglog"><span class="toc-number">1.7.</span> <span class="toc-text">Hyperloglog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本事务操作"><span class="toc-number">1.8.</span> <span class="toc-text">基本事务操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jedis"><span class="toc-number">1.9.</span> <span class="toc-text">Jedis</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/%E5%AE%9E%E8%AE%AD%E5%B0%8F%E6%80%BB%E7%BB%932/" class="archive-article-date">
-  	<time datetime="2020-07-05T02:09:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/%E5%AE%9E%E8%AE%AD%E5%B0%8F%E6%80%BB%E7%BB%932/">实训小总结2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -277,8 +448,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
