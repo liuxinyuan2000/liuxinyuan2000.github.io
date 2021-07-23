@@ -33,7 +33,7 @@
 <meta property="og:image" content="d:/Typora/图片/1625027942332.png">
 <meta property="og:image" content="d:/Typora/图片/1625028017983.png">
 <meta property="article:published_time" content="2021-06-30T03:29:01.837Z">
-<meta property="article:modified_time" content="2021-07-23T03:46:59.211Z">
+<meta property="article:modified_time" content="2021-07-23T07:31:33.694Z">
 <meta property="article:author" content="Liu xinyuan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:/Typora/图片/1625023831514.png">
@@ -203,15 +203,20 @@
         <p><strong>SpringSecurity</strong></p>
 <a id="more"></a>
 
+
+
+<p> springsecurity底层实现为一条过滤器链，就是用户请求进来，判断有没有请求的权限，抛出异常，重定向跳转。 </p>
 <h2 id="springsecurity概述"><a href="#springsecurity概述" class="headerlink" title="springsecurity概述"></a>springsecurity概述</h2><img src="D:\Typora\图片\1625023831514.png" alt="1625023831514" style="zoom:67%;" />
 
 <img src="D:\Typora\图片\1625023895467.png" alt="1625023895467" style="zoom:50%;" />
 
+<p>如果只实现一个WebSecurityConfigurerAdapter然后重写一下configure方法，效果会默认使用springsecurity的登录页 ，以及项目启动时后台会打印出一个默认的密码，然后使用任意账号就可以进行登录访问指定的资源</p>
 <p>根据静态页面写controller</p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1625024144019.png" alt="1625024144019"></p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1625024210138.png" alt="1625024210138"></p>
 <p>实现三个等级的划分</p>
 <p>利用的是aop横切的思想</p>
+<p> 某些时候用户登陆成功，登陆失败的时候可能还需要做一些操作，比如成功登陆增加一积分之类的操作，这里需要做两个handler处理器 </p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1625024286845.png" alt="1625024286845"></p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1625024581303.png" alt="1625024581303"></p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1625024724366.png" alt="1625024724366"></p>
