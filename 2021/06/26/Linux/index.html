@@ -24,7 +24,7 @@
 <meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624713535021.png">
 <meta property="og:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624714921059.png">
 <meta property="article:published_time" content="2021-06-26T10:42:25.961Z">
-<meta property="article:modified_time" content="2021-07-23T07:29:19.654Z">
+<meta property="article:modified_time" content="2021-07-23T07:38:06.919Z">
 <meta property="article:author" content="Liu xinyuan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624712523922.png">
@@ -193,8 +193,33 @@
       
         <h1 id="Linux入门"><a href="#Linux入门" class="headerlink" title="Linux入门"></a>Linux入门</h1><a id="more"></a>
 
-<h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p> Linux，全称GNU/Linux，是一种免费使用和自由传播的<a href="https://baike.baidu.com/item/类UNIX/9032872" target="_blank" rel="noopener">类UNIX</a>操作系统，其内核由<a href="https://baike.baidu.com/item/林纳斯·本纳第克特·托瓦兹/1034429" target="_blank" rel="noopener">林纳斯·本纳第克特·托瓦兹</a>于1991年10月5日首次发布，它主要受到<a href="https://baike.baidu.com/item/Minix/7106045" target="_blank" rel="noopener">Minix</a>和Unix思想的启发，是一个基于<a href="https://baike.baidu.com/item/POSIX" target="_blank" rel="noopener">POSIX</a>的多用户、<a href="https://baike.baidu.com/item/多任务/1011764" target="_blank" rel="noopener">多任务</a>、支持<a href="https://baike.baidu.com/item/多线程/1190404" target="_blank" rel="noopener">多线程</a>和多<a href="https://baike.baidu.com/item/CPU" target="_blank" rel="noopener">CPU</a>的操作系统。它能运行主要的<a href="https://baike.baidu.com/item/Unix/219943" target="_blank" rel="noopener">Unix</a>工具软件、应用程序和网络协议。它支持<a href="https://baike.baidu.com/item/32位/5812218" target="_blank" rel="noopener">32位</a>和<a href="https://baike.baidu.com/item/64位" target="_blank" rel="noopener">64位</a>硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。Linux有上百种不同的发行版，如基于社区开发的<a href="https://baike.baidu.com/item/debian/748667" target="_blank" rel="noopener">debian</a>、<a href="https://baike.baidu.com/item/archlinux/10857530" target="_blank" rel="noopener">archlinux</a>，和基于商业开发的[Red Hat Enterprise Linux](<a href="https://baike.baidu.com/item/Red" target="_blank" rel="noopener">https://baike.baidu.com/item/Red</a> Hat Enterprise Linux/10770503)、<a href="https://baike.baidu.com/item/SUSE/60409" target="_blank" rel="noopener">SUSE</a>、[Oracle Linux](<a href="https://baike.baidu.com/item/Oracle" target="_blank" rel="noopener">https://baike.baidu.com/item/Oracle</a> Linux/6876458)等。 </p>
-<p>用户登录的方式一般有三种：命令行登录、ssh登录、图形界面登录</p>
+
+
+<h2 id="linux简介"><a href="#linux简介" class="headerlink" title="linux简介"></a>linux简介</h2><p><strong>操作系统（Operating System，简称 OS）是管理计算机硬件与软件资源的程序，是计算机的基石。</strong></p>
+<p><strong>操作系统本质上是一个运行在计算机上的软件程序 ，用于管理计算机硬件和软件资源。</strong> 举例：运行在你电脑上的所有应用程序都通过操作系统来调用系统内存以及磁盘等等硬件。</p>
+<p><strong>操作系统存在屏蔽了硬件层的复杂性。</strong> 操作系统就像是硬件使用的负责人，统筹着各种相关事项。</p>
+<p><strong>操作系统的内核（Kernel）是操作系统的核心部分，它负责系统的内存管理，硬件设备的管理，文件系统的管理以及应用程序的管理</strong>。</p>
+<p> <strong>Linux 是一套免费使用、开源的类 Unix 操作系统。</strong> Linux 存在着许多不同的发行版本，但它们都使用了 <strong>Linux 内核</strong> 。 </p>
+<p>严格来讲，Linux 这个词本身只表示 Linux 内核，在 GNU/Linux 系统中，Linux 实际就是 Linux 内核，而该系统的其余部分主要是由 GNU 工程编写和提供的程序组成。单独的 Linux 内核并不能成为一个可以正常工作的操作系统。</p>
+<p><strong>很多人更倾向使用 “GNU/Linux” 一词来表达人们通常所说的 “Linux”。</strong></p>
+<h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><p>介绍系统调用之前，我们先来了解一下用户态和系统态。</p>
+<p>根据进程访问资源的特点，我们可以把进程在系统上的运行分为两个级别：</p>
+<ol>
+<li><strong>用户态(user mode)</strong> : 用户态运行的进程或可以直接读取用户程序的数据。</li>
+<li><strong>系统态(kernel mode)</strong>: 可以简单的理解系统态运行的进程或程序几乎可以访问计算机的任何资源，不受限制。</li>
+</ol>
+<p><strong>说了用户态和系统态之后，那么什么是系统调用呢？</strong></p>
+<p>我们运行的程序基本都是运行在用户态，如果我们调用操作系统提供的系统态级别的子功能咋办呢？那就需要系统调用了！</p>
+<p>也就是说在我们运行的用户程序中，凡是与系统态级别的资源有关的操作（如文件管理、进程控制、内存管理等)，都必须通过系统调用方式向操作系统提出服务请求，并由操作系统代为完成。</p>
+<p>这些系统调用按功能大致可分为如下几类：</p>
+<ul>
+<li><strong>设备管理</strong> ：完成设备的请求或释放，以及设备启动等功能。</li>
+<li><strong>文件管理</strong> ：完成文件的读、写、创建及删除等功能。</li>
+<li><strong>进程控制</strong> ：完成进程的创建、撤销、阻塞及唤醒等功能。</li>
+<li><strong>进程通信</strong> ：完成进程之间的消息传递或信号传递等功能。</li>
+<li><strong>内存管理</strong> ：完成内存的分配、回收以及获取作业占用内存区大小及地址等功能</li>
+</ul>
+<h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>用户登录的方式一般有三种：命令行登录、ssh登录、图形界面登录</p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624712523922.png" alt="1624712523922"></p>
 <p>关机</p>
 <p><img src="D:%5CTypora%5C%E5%9B%BE%E7%89%87%5C1624712614207.png" alt="1624712614207"></p>
@@ -340,7 +365,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux入门"><span class="toc-number">1.</span> <span class="toc-text">Linux入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#登录"><span class="toc-number">1.1.</span> <span class="toc-text">登录</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux入门"><span class="toc-number">1.</span> <span class="toc-text">Linux入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux简介"><span class="toc-number">1.1.</span> <span class="toc-text">linux简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统调用"><span class="toc-number">1.2.</span> <span class="toc-text">系统调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登录"><span class="toc-number">1.3.</span> <span class="toc-text">登录</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
